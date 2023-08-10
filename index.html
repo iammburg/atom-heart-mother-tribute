@@ -28,6 +28,29 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .hover-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      .hover-gif {
+        position: absolute;
+        top: -280%;
+        left: 50%; /* Set initial position to the center */
+        transform: translateX(-50%); /* Center the GIF horizontally */
+        opacity: 0;
+        pointer-events: none;
+        transition:
+          opacity 0.3s ease-in-out,
+          transform 0.3s ease-in-out; /* Include transform transition */
+      }
+
+      .hover-container:hover .hover-gif {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-10px); /* Move the GIF up by 10px when hovered */
+      }
+    </style>
   </head>
   <body>
     <!-- Header Start -->
@@ -35,32 +58,38 @@
     <!-- Header End -->
 
     <!-- Hero Start -->
-    <section class="bg-black pb-12 pt-24">
+    <section class="bg-slate-950 pb-12 pt-24">
       <div class="container">
         <div class="flex flex-wrap md:p-10">
           <div
             class="mb-11 w-full self-center px-4 sm:text-center md:px-6 md:text-center lg:w-1/2 lg:text-left"
           >
             <h1
-              class="font-dm_serif text-4xl text-white lg:text-8xl lg:tracking-wider"
+              class="font-folklore text-4xl tracking-wider text-white lg:text-7xl lg:tracking-wider"
             >
               Atom Heart Mother
             </h1>
-            <h2
-              class="mt-2 font-anon text-xl tracking-tight text-white lg:text-2xl"
-            >
-              Pink Floyd's first album to reach number
-              <span class="text-red-600">1</span> in the UK, while it reached
-              number 55 in the US, eventually going gold there.
+            <h2 class="mt-2 font-sofia text-xl text-white lg:text-2xl">
+              Pink Floyd's first album to reach
+              <span class="hover-container font-bold text-red-600"
+                >number #1<img
+                  class="hover-gif"
+                  src="dist/img/cow.gif"
+                  alt="GIF"
+                />
+              </span>
+              in the UK, while it reached number 55 in the US, eventually going
+              <span class="font-bold text-yellow-300">gold</span> there.
             </h2>
+
             <div
-              class="group relative mt-6 flex cursor-pointer sm:items-center sm:justify-center sm:pt-6 md:mt-6 md:items-center md:justify-center lg:mt-0 lg:items-start lg:justify-start"
+              class="group relative mt-6 flex cursor-pointer sm:mt-6 sm:items-center sm:justify-center md:mt-9 md:items-center md:justify-center lg:mt-6 lg:items-start lg:justify-start"
             >
               <div
                 class="absolute h-11 w-28 -translate-y-2 translate-x-2 border-2 border-white bg-transparent transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-1 md:h-14 md:w-36"
               ></div>
               <div
-                class="absolute flex h-11 w-28 items-center justify-center bg-white text-center font-josefin font-bold tracking-wider transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:bg-green-500 group-hover:text-white md:h-14 md:w-36"
+                class="absolute flex h-11 w-28 items-center justify-center bg-white p-2 text-center font-folklore text-sm transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:bg-green-500 group-hover:text-white md:h-14 md:w-36 lg:text-lg"
               >
                 <h2>Listen Now!</h2>
               </div>

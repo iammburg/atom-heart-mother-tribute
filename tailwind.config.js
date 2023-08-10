@@ -11,7 +11,9 @@ module.exports = {
       dm_serif: ["DM Serif Display"],
       playfair: ["Playfair Display SC"],
       anon: ["Anonymous Pro"],
-      josefin: ["Josefin Sans:wght@600"],
+      raleway: ["Raleway"],
+      folklore: ["Folklore", "sans"],
+      sofia: ["Sofia", "sans"],
     },
     extend: {
       screens: {
