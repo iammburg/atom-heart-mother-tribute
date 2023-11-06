@@ -7,13 +7,13 @@ module.exports = {
       padding: "16px",
     },
     fontFamily: {
-      ultra: ["Ultra"],
       dm_serif: ["DM Serif Display"],
       playfair: ["Playfair Display SC"],
       anon: ["Anonymous Pro"],
       raleway: ["Raleway"],
       folklore: ["Folklore", "sans"],
       sofia: ["Sofia", "sans"],
+      poppins: ["Poppins", "sans"],
     },
     extend: {
       screens: {
